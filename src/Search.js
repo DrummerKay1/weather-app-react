@@ -113,7 +113,14 @@ export default function Search() {
             </div>
           </div>
         </div>
-        <a href="" target="_blank" className="gitLink" >Open-Sourced by Kayla Neuss</a>
+        <a
+          href="https://github.com/DrummerKay1/weather-app-react"
+          target="_blank"
+          rel="nonreferrer"
+          className="gitLink"
+        >
+          Open-Sourced by Kayla Neuss
+        </a>
       </div>
     </div>
   );
