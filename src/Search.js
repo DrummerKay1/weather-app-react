@@ -113,6 +113,7 @@ export default function Search() {
             </div>
           </div>
         </div>
+        <br />
         <a
           href="https://github.com/DrummerKay1/weather-app-react"
           target="_blank"
