@@ -117,7 +117,7 @@ export default function Search() {
         <a
           href="https://github.com/DrummerKay1/weather-app-react"
           target="_blank"
-          rel="nonreferrer"
+          rel="noreferrer"
           className="gitLink"
         >
           Open-Sourced by Kayla Neuss
