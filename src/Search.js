@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 import "./Search.css";
 export default function Search(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -9,7 +10,7 @@ export default function Search(props) {
       ready: true,
       name: response.data.name,
       temperature: Math.round(response.data.main.temp),
-      date: "Tuesday 16:00",
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       imgUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       highOf: Math.round(response.data.main.temp_max),
@@ -47,10 +48,15 @@ export default function Search(props) {
             </div>
           </div>
         </form>
-        <h5> Last updated: {weatherData.date}</h5>
+        <h5>
+          {" "}
+          Last Updated: <FormattedDate date={weatherData.date} />
+        </h5>
         <div className="centerElement">
           <h1>{weatherData.name}</h1>
-          <h4>{weatherData.description}</h4>
+          <h4>
+            <p className="text-capitalize">{weatherData.description}</p>
+          </h4>
           <div className="weatherSymbol">
             {" "}
             <img
