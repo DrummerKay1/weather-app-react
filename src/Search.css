@@ -13,11 +13,6 @@
   margin-bottom: 10px;
   padding: 60px;
 }
-h5 {
-  text-align: right;
-  font-style: italic;
-  padding: 20px;
-}
 h1 {
   color: #04293a;
   font-size: 40px;
@@ -32,9 +27,6 @@ h6 {
   color: #04293a;
   font-size: 25px;
   font-style: italic;
-}
-small {
-  color: #064663;
 }
 .search {
   padding: 25px;
@@ -76,25 +68,6 @@ small {
   background-color: #064663;
   border: 1px solid #1377a5;
 }
-.mainTemperature {
-  font-size: 50px;
-  position: relative;
-  left: 15px;
-  color: #04293a;
-}
-.weatherSymbol {
-  font-size: 68px;
-}
-.high {
-  font-size: 20px;
-}
-.variables,
-.minTemp {
-  color: #064663;
-}
-.celcius:hover {
-  color: #1377a5;
-}
 .col {
   background: linear-gradient(
     108.1deg,
@@ -112,33 +85,20 @@ small {
   text-align: center;
 }
 .img {
-  font-size: 35px;
+  font-size: 36px;
 }
 .temp {
   font-size: 20px;
 }
 .gitLink {
-  color: #04293a;
+  color: #064663;
   font-size: 20px;
   font-style: italic;
   padding-top: 10px;
   padding-bottom: 30px;
   text-align: center;
-  text-decoration: none;
 }
 .gitLink:hover {
   color: #1377a5;
 }
-.units {
-  font-size: 16px;
-  line-height: 1;
-  position: relative;
-  top: -23px;
-}
-.units .active {
-  color: #041c32;
-  cursor: default;
-}
-.units .active:hover {
-  color: #041c32;
-}
+

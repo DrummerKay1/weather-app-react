@@ -1,0 +1,14 @@
+.unit {
+  font-size: 16px;
+  line-height: 1;
+  padding-left: 4px;
+  position: relative;
+  top: -23px;
+}
+.unit .active {
+  color: #041c32;
+  cursor: default;
+}
+.unit .active:hover {
+  color: #1377a5;
+}
