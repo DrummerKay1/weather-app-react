@@ -12,6 +12,7 @@
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 60px;
+  text-align: center;
 }
 h1 {
   color: #04293a;
@@ -42,7 +43,6 @@ h6 {
   box-shadow: 2px 2px 5px #04293a;
   max-width: 900px;
   margin: 0 auto;
-  text-align: center;
   padding: 30px;
 }
 .form-control {
@@ -68,37 +68,13 @@ h6 {
   background-color: #064663;
   border: 1px solid #1377a5;
 }
-.col {
-  background: linear-gradient(
-    108.1deg,
-    rgb(167, 220, 225) 11.2%,
-    rgb(217, 239, 242) 88.9%
-  );
-  border: 2px solid #064663;
-  border-radius: 25px;
-  box-shadow: 1px 1px 3px #04293a;
-  margin: 10px;
-  padding: 5px;
-}
-.forecast {
-  padding: 20px;
-  text-align: center;
-}
-.img {
-  font-size: 36px;
-}
-.temp {
-  font-size: 20px;
-}
 .gitLink {
   color: #064663;
   font-size: 20px;
   font-style: italic;
   padding-top: 10px;
   padding-bottom: 30px;
-  text-align: center;
 }
 .gitLink:hover {
   color: #1377a5;
 }
-
