@@ -10,6 +10,7 @@ export default function Search(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
+      coord: response.data.coord,
       name: response.data.name,
       temperature: Math.round(response.data.main.temp),
       date: new Date(response.data.dt * 1000),
@@ -72,7 +73,8 @@ export default function Search(props) {
         <div className="centerElement">
           <WeatherInfo data={weatherData} />
         </div>
-        <Forecast /> 
+        <br />
+        <Forecast coord={weatherData.coord}/> 
           <br />
           <a
             href="https://github.com/DrummerKay1/weather-app-react"

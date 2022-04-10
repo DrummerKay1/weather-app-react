@@ -1,55 +1,32 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
+import ForecastDay from "./ForecastDay";
 import "./Forecast.css";
-export default function Forecast() {
-  return (
-    <div className="forecast">
-      <div className="row">
-        <div className="col">
-          <h6>Sat</h6>
-          <div className="img">☁</div>
-          <div className="temp">
-            67°
-            <br />
-            <small> 54°</small>
-          </div>
-        </div>
-        <div className="col">
-          <h6>Sun</h6>
-          <div className="img">🌤</div>
-          <div className="temp">
-            70°
-            <br />
-            <small>52°</small>
-          </div>
-        </div>
-        <div className="col">
-          <h6>Mon</h6>
-          <div className="img">🌤</div>
-          <div className="temp">
-            66°
-            <br />
-            <small> 52°</small>
-          </div>
-        </div>
-        <div className="col">
-          <h6>Tue</h6>
-          <div className="img">🌤</div>
-          <div className="temp">
-            65°
-            <br />
-            <small> 49°</small>
-          </div>
-        </div>
-        <div className="col">
-          <h6>Wed</h6>
-          <div className="img">🌤</div>
-          <div className="temp">
-            65°
-            <br />
-            <small> 49°</small>
+export default function Forecast(props) {
+  let [loaded, setLoaded] = useState(false);
+  let [forecast, setForecast] = useState(null);
+    function handleResponse(response) {
+      setForecast(response.data.list);
+      setLoaded(true);
+    };
+  if (loaded) {
+    return (
+      <div className="Forecast">
+        <div className="row">
+          <div className="col">
+              <ForecastDay data={forecast[0]} />
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+      const apiKey = "989bcbe68d0cc1b00b25e60364c50c46";
+      let units = "Imperial";
+      let latitude = props.coord.lat;
+      let longitude = props.coord.lon;
+      let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+      console.log(apiUrl);
+    axios.get(apiUrl).then(handleResponse);
+    return "Loading Forecast...";
+  }
 }
