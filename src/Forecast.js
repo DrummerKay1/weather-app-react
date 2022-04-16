@@ -10,15 +10,15 @@ export default function Forecast(props) {
   }, [props.coord]);
 
   function handleResponse(response) {
-    setForecast(response.data.list);
+    setForecast(response.data.daily);
     setLoaded(true);
   }
   function load() {
     const apiKey = "989bcbe68d0cc1b00b25e60364c50c46";
-    let units = "Imperial";
+    let units = "imperial";
     let latitude = props.coord.lat;
     let longitude = props.coord.lon;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(handleResponse);
   }
   if (loaded) {
