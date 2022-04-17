@@ -57,13 +57,6 @@ export default function Search(props) {
                 className="form-control btn btn-primary"
               />
             </div>
-            <div className="col-2">
-              <input
-                type="submit"
-                value="Current Location"
-                className="form-control btn btn-primary locationButton"
-              />
-            </div>
           </div>
         </form>
         <h5>

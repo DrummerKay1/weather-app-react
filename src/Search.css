@@ -60,14 +60,6 @@ h6 {
   border: 1px solid #04293a;
   font-style: italic;
 }
-.locationButton {
-  background: #1377a5;
-  border: 1px solid #04293a;
-}
-.locationButton:hover {
-  background-color: #064663;
-  border: 1px solid #1377a5;
-}
 .gitLink {
   color: #064663;
   font-size: 20px;
